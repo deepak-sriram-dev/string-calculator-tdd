@@ -1,0 +1,19 @@
+.calculator-main {
+  height: 100%;
+
+  .calculator-section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .input-field {
+      margin-bottom: 10px;
+    }
+
+    .calc-btn {
+      padding: 5px;
+    }
+  }
+}
