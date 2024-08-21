@@ -1,5 +1,6 @@
 import React from "react";
-import './styles.scss'
+import "./styles.scss";
+import { add } from "./calculate";
 
 const StringCalculator = () => {
   const [input, setInput] = React.useState("");
@@ -7,6 +8,16 @@ const StringCalculator = () => {
 
   const handleChange = (e) => {
     setInput(e.target.value);
+  };
+
+  const handleCalculate = () => {
+    try {
+      const calculated = add(input)
+      console.log("🚀 ~ handleCalculate ~ calculated:", calculated)
+      setResult(calculated);
+    } catch (error) {
+      setResult(error.message);
+    }
   };
 
   return (
@@ -18,7 +29,9 @@ const StringCalculator = () => {
           value={input}
           onChange={handleChange}
         />
-        <button className="calc-btn">Calculate</button>
+        <button onClick={handleCalculate} className="calc-btn">
+          Calculate
+        </button>
         <p>Result: {result}</p>
       </div>
     </div>
