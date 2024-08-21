@@ -1,4 +1,4 @@
-# String Calculator Kata
+# String Calculator
 
 This project implements a String Calculator based on the popular TDD. It allows you to add comma-separated numbers, new line-separated numbers, and even numbers with custom delimiters. Additionally, it supports a user interface for interactive calculation.
 
