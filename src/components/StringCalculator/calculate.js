@@ -20,7 +20,7 @@ function parseNumbers(numbers) {
 function validateNumbers(numbers) {
   const negativeNumbers = numbers.filter((num) => parseInt(num) < 0);
   if (negativeNumbers.length > 0) {
-    throw new Error("Negatives not allowed: " + negativeNumbers.join(", "));
+    throw new Error("negative numbers not allowed: " + negativeNumbers.join(", "));
   }
 }
 
